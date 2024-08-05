@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/scripts/script.js" defer></script>
+    <title>Protein Powder Calorie Calculator</title>
+</head>
+<body>
+    <div class="flex justify-center bg-zinc-700 items-center justify-center h-screen">
+        <div class="rounded-2xl p-2 mx-6 bg-zinc-800">
+            <div class="flex flex-col md:flex-row rounded-l-xl">
+                <img src="./images/protein.jpg" alt="protein powder" class="object-fit rounded-xl h-80 md:h-100 md:rounded-l-xl md:rounded-r-none transform hover:scale-105 hover:rounded-xl duration-200">
+                <div class="p-6 md:p-12">
+                    <h2 class="font-serif text-xl font-medium text-white text-center md:text-left">P2C2 - Calculate how much protein powder you need for your calorie requirement</h2>
+                    <p class="my-4 text-xs leading-5 tracking-wide font-sans text-white text-left">Enter details from your nutrition label & quickly get weight & scoop measurements</p>
+                    <form id="calorieCalculatorForm" class="flex flex-col mt-5 space-y-4 md:space-x-3 md:flex-row md:space-y-0">
+                        <input id="gramsPerScoop" name="gramsPerScoop" class="border border-zinc-600 bg-zinc-800 p-2 px-4 bg-stone-900 text-white text-center placeholder:text-xs placeholder:text-center md:text-left placeholder:md:text-left focus:outline-none" type="number" placeholder="grams per scoop" required min="1">
+                        <input id="caloriesPerScoop" name="caloriesPerScoop" class="border border-zinc-600 bg-zinc-800 p-2 px-4 bg-stone-900 text-white text-center placeholder:text-xs placeholder:text-center md:text-left placeholder:md:text-left focus:outline-none" type="number" placeholder="calories per scoop" required min="1">
+                        <input id="targetCalories" name="targetCalories" class="border border-zinc-600 bg-zinc-800 p-2 px-4 bg-stone-900 text-white text-center placeholder:text-xs placeholder:text-center md:text-left placeholder:md:text-left focus:outline-none" type="number" placeholder="calorie target" required min="1">
+                        <button class="bg-lime-500 hover:bg-lime-700 hover:text-white duration-500 text-zinc-800 text-xs px-5 py-3 rounded-md border-lime-600 ms-4" type="submit">Calculate</button>  
+                    </form>
+                    <h2 class="pt-4 font-serif text-xl font-medium text-white text-center md:text-left">Protein requirements:</h2>
+                    <span id="gramsRequired" class="text-white"></span><span id="scoopsRequired" class="text-white ml-6"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
